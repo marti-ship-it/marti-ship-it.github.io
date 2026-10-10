@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Martin Omondi — Cyber Security Specialist, Network Designer and Linux Administrator. Portfolio of secure LAN design, security awareness and AI workflow projects."
+    />
+    <!-- Trimmed for search snippets; og/twitter below carry the longer form -->
+    <meta name="author" content="Martin Omondi" />
+    <title>Martin Omondi // Cyber Security Specialist</title>
+    <meta name="theme-color" content="#1C1E3A" />
+
+    <!-- Favicon: inline SVG carries the navy ground and apricot ">_" mark -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <!-- Social preview. Values reuse the description above so there is one
+       source of truth to keep in sync. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Martin Omondi" />
+    <meta property="og:title" content="Martin Omondi // Cyber Security Specialist" />
+    <meta
+      property="og:description"
+      content="Cyber Security Specialist, Network Designer and Linux Administrator. Portfolio of secure LAN design, security awareness and AI workflow projects."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:image" content="images/martin-900.jpg" />
+    <meta property="og:image:width" content="900" />
+    <meta property="og:image:height" content="506" />
+    <meta property="og:image:alt" content="Portrait of Martin Omondi" />
+    <meta property="og:locale" content="en_KE" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Martin Omondi // Cyber Security Specialist" />
+    <meta
+      name="twitter:description"
+      content="Cyber Security Specialist, Network Designer and Linux Administrator. Portfolio of secure LAN design, security awareness and AI workflow projects."
+    />
+    <meta name="twitter:image" content="images/martin-900.jpg" />
+    <meta name="twitter:image:alt" content="Portrait of Martin Omondi" />
+
+    <!-- Structured data so search engines read the person, role and links -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Martin Omondi",
+        "jobTitle": "Cyber Security Specialist, Network Designer and Linux Administrator",
+        "image": "images/martin-900.jpg",
+        "telephone": "+254706459766",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nairobi",
+          "addressCountry": "KE"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "The Nairobi National Polytechnic"
+        },
+        "sameAs": [
+          "https://github.com/Marti-ship-it",
+          "https://www.linkedin.com/in/martin-omondi-2a70a6362",
+          "https://instagram.com/just.martin__"
+        ]
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/styles/styles.css" />
+
+    <!-- Progressive enhancement: marks the document as scripted so entrance
+       reveals only hide content when a module can bring it back. When the
+       page is opened straight from disk (file://), ES modules cannot run,
+       so skip the gating and ship everything visible. -->
+    <script>
+      if (window.location.protocol !== "file:") {
+        document.documentElement.className += " js";
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Skip link for keyboard users -->
+    <a class="skip-link" href="#about">Skip to content</a>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <header class="nav" id="nav">
+      <div class="nav__inner container">
+        <a class="brand" href="#top">
+          <span class="brand__mark" aria-hidden="true">&gt;_</span>
+          <span class="brand__text">Martin<span class="brand__accent">.dev</span></span>
+        </a>
+
+        <nav class="nav__links" id="nav-links" aria-label="Primary">
+          <a class="nav__link" href="#about">About</a>
+          <a class="nav__link" href="#credentials">Credentials</a>
+          <a class="nav__link" href="#skills">Skills</a>
+          <a class="nav__link" href="#projects">Projects</a>
+          <a class="nav__link" href="#contact">Contact</a>
+          <span class="nav__indicator" aria-hidden="true"></span>
+        </nav>
+
+        <button
+          class="nav__toggle"
+          id="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ==================== HERO ==================== -->
+      <section class="hero">
+        <div class="hero__bg" aria-hidden="true"></div>
+
+        <div class="hero__inner container">
+          <p class="hero__status reveal">
+            <span class="hero__dot" aria-hidden="true"></span>
+            Available for opportunities
+          </p>
+
+          <h1 class="hero__title reveal">
+            Hi, I'm Martin Omondi<span class="hero__period" aria-hidden="true">.</span>
+          </h1>
+
+          <!-- Screen readers get the full list; the animated line is hidden from them -->
+          <p class="hero__role">
+            <span class="sr-only"
+              >Cyber Security Specialist, Network Designer, Linux Administrator.</span
+            >
+            <span class="hero__role-prefix" aria-hidden="true">&gt;</span>
+            <span class="typed" id="typed" aria-hidden="true"></span
+            ><span class="caret" aria-hidden="true"></span>
+          </p>
+
+          <p class="hero__lede reveal">
+            I design and harden networks, lock down Linux systems, and hunt for the weaknesses that
+            slip through. Currently a Level 6 Diploma candidate in Information Communication
+            Technology at The Nairobi National Polytechnic.
+          </p>
+
+          <div class="hero__actions reveal">
+            <a class="btn btn--primary" href="#projects" data-scroll>
+              Explore My Work
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="btn__icon">
+                <path
+                  d="M12 5v14M19 12l-7 7-7-7"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <a class="btn btn--ghost" href="#contact" data-scroll>Initiate Handshake</a>
+          </div>
+
+          <ul class="hero__stats reveal" aria-label="Quick facts">
+            <li><strong class="mono">CDACC</strong><span>Level 6 Diploma</span></li>
+            <li><strong class="mono">Packet Tracer</strong><span>CCNA Certified</span></li>
+            <li><strong class="mono">Kali Linux</strong><span>Offensive tooling</span></li>
+          </ul>
+        </div>
+
+        <a class="hero__scroll" href="#about" data-scroll aria-label="Scroll to About section">
+          <span class="mono">scroll</span>
+          <span class="hero__scroll-line" aria-hidden="true"></span>
+        </a>
+      </section>
+
+      <!-- ==================== ABOUT ==================== -->
+      <section class="section" id="about">
+        <div class="container">
+          <header class="section__head reveal">
+            <span class="section__index mono">01</span>
+            <h2 class="section__title">About Me</h2>
+            <span class="section__rule" aria-hidden="true"></span>
+          </header>
+
+          <div class="about">
+            <div class="about__text reveal">
+              <p class="about__lead">
+                I am a Cyber Security professional currently pursuing my Level 6 Diploma under the
+                TVET CDACC curriculum at The Nairobi National Polytechnic.
+              </p>
+              <p>
+                I specialize in network security, database management, and system administration.
+                Whether I'm configuring secure LAN topologies or working within Kali Linux, I am
+                passionate about building robust systems and understanding vulnerabilities.
+              </p>
+
+              <dl class="about__facts">
+                <div class="about__fact">
+                  <dt class="mono">Focus</dt>
+                  <dd>Network security &amp; system hardening</dd>
+                </div>
+                <div class="about__fact">
+                  <dt class="mono">Institution</dt>
+                  <dd>The Nairobi National Polytechnic</dd>
+                </div>
+                <div class="about__fact">
+                  <dt class="mono">Environment</dt>
+                  <dd>Linux-first, Kali, Zsh</dd>
+                </div>
+              </dl>
+            </div>
+
+            <figure class="about__avatar reveal">
+              <div class="about__avatar-frame">
+                <img
+                  class="about__photo"
+                  src="images/martin-900.jpg"
+                  alt="Portrait of Martin Omondi"
+                  width="900"
+                  height="506"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption class="about__avatar-caption mono">based in nairobi, ke</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== CREDENTIALS ==================== -->
+      <section class="section" id="credentials">
+        <div class="container">
+          <header class="section__head reveal">
+            <span class="section__index mono">02</span>
+            <h2 class="section__title">Cisco <em>Credentials</em></h2>
+            <span class="section__rule" aria-hidden="true"></span>
+          </header>
+
+          <p class="credentials__intro reveal">
+            Six verified Cisco Networking Academy credentials covering security, networking, Linux,
+            hardware and applied AI. Each links to the certificate of completion.
+          </p>
+
+          <ul class="credentials reveal">
+            <li class="credential">
+              <span class="credential__num mono" aria-hidden="true">01</span>
+              <div class="credential__body">
+                <h3 class="credential__title">Introduction to Cybersecurity</h3>
+                <p class="credential__issuer mono">Cisco Networking Academy</p>
+              </div>
+              <span class="credential__date mono" aria-label="Issued 25 September 2025"
+                >sep 2025</span
+              >
+              <a
+                class="credential__link"
+                href="CISCO Certificates/Introduction_to_Cybersecurity_certificate_omondimartin344-gmail-com_ab32f17c-393f-4232-b627-40912ee10725 (1).pdf"
+                aria-label="View certificate: Introduction to Cybersecurity"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="mono">pdf</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M7 17L17 7M9 7h8v8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li class="credential">
+              <span class="credential__num mono" aria-hidden="true">02</span>
+              <div class="credential__body">
+                <h3 class="credential__title">Computer Hardware Basics</h3>
+                <p class="credential__issuer mono">Cisco Networking Academy</p>
+              </div>
+              <span class="credential__date mono" aria-label="Issued 13 October 2025"
+                >oct 2025</span
+              >
+              <a
+                class="credential__link"
+                href="CISCO Certificates/Computer_Hardware_Basics_certificate_omondimartin344-gmail-com_a35a1ff0-3d4c-46ba-8392-c9ca69cc791e.pdf"
+                aria-label="View certificate: Computer Hardware Basics"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="mono">pdf</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M7 17L17 7M9 7h8v8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li class="credential">
+              <span class="credential__num mono" aria-hidden="true">03</span>
+              <div class="credential__body">
+                <h3 class="credential__title">Getting Started with Cisco Packet Tracer</h3>
+                <p class="credential__issuer mono">Cisco Networking Academy</p>
+              </div>
+              <span class="credential__date mono" aria-label="Issued 11 February 2026"
+                >feb 2026</span
+              >
+              <a
+                class="credential__link"
+                href="CISCO Certificates/Getting_Started_with_Cisco_Packet_Tracer_certificate_omondimartin344-gmail-com_88623968-8cfc-4207-af83-3a283015be55.pdf"
+                aria-label="View certificate: Getting Started with Cisco Packet Tracer"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="mono">pdf</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M7 17L17 7M9 7h8v8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li class="credential">
+              <span class="credential__num mono" aria-hidden="true">04</span>
+              <div class="credential__body">
+                <h3 class="credential__title">Networking Basics</h3>
+                <p class="credential__issuer mono">Cisco Networking Academy</p>
+              </div>
+              <span class="credential__date mono" aria-label="Issued 15 June 2026">jun 2026</span>
+              <a
+                class="credential__link"
+                href="CISCO Certificates/Networking_Basics_certificate_omondimartin344-gmail-com_02223f1e-8624-4762-9bc1-3a8db9bb1544.pdf"
+                aria-label="View certificate: Networking Basics"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="mono">pdf</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M7 17L17 7M9 7h8v8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li class="credential">
+              <span class="credential__num mono" aria-hidden="true">05</span>
+              <div class="credential__body">
+                <h3 class="credential__title">Introduction to Modern AI</h3>
+                <p class="credential__issuer mono">Cisco Networking Academy</p>
+              </div>
+              <span class="credential__date mono" aria-label="Issued 24 June 2026">jun 2026</span>
+              <a
+                class="credential__link"
+                href="CISCO Certificates/Introduction_to_Modern_AI_certificate_omondimartin344-gmail-com_776c1f6b-3f95-40a4-9d32-702f11d8aff6.pdf"
+                aria-label="View certificate: Introduction to Modern AI"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="mono">pdf</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M7 17L17 7M9 7h8v8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li class="credential">
+              <span class="credential__num mono" aria-hidden="true">06</span>
+              <div class="credential__body">
+                <h3 class="credential__title">Linux Essentials</h3>
+                <p class="credential__issuer mono">Cisco Networking Academy</p>
+              </div>
+              <span class="credential__date mono" aria-label="Issued 7 July 2026">jul 2026</span>
+              <a
+                class="credential__link"
+                href="CISCO Certificates/Linux_Essentials_certificate_omondimartin344-gmail-com_58dd08ce-6af7-4a55-b581-a8729d1a3b1e.pdf"
+                aria-label="View certificate: Linux Essentials"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="mono">pdf</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M7 17L17 7M9 7h8v8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+          <p class="credentials__foot reveal mono">
+            in progress — cdacc level 6 diploma, information communication technology
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================== SKILLS ==================== -->
+      <section class="section" id="skills">
+        <div class="container">
+          <header class="section__head reveal">
+            <span class="section__index mono">03</span>
+            <h2 class="section__title">Technical <em>Skills</em></h2>
+            <span class="section__rule" aria-hidden="true"></span>
+          </header>
+
+          <div class="skills">
+            <article class="skill-card reveal">
+              <h3 class="skill-card__title">
+                <span class="skill-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M4 6h16v4H4zM4 14h16v4H4zM7 8h.01M7 16h.01"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                Networking
+              </h3>
+              <ul class="tags">
+                <li class="tag">
+                  Cisco Packet Tracer
+                  <span class="tag__badge" title="Certified">certified</span>
+                </li>
+                <li class="tag">Secure LAN Design</li>
+                <li class="tag">VLANs</li>
+                <li class="tag">DHCP Routing</li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3 class="skill-card__title">
+                <span class="skill-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect
+                      x="3"
+                      y="4"
+                      width="18"
+                      height="13"
+                      rx="2"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                    />
+                    <path
+                      d="M8 20h8M12 17v3"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                Systems &amp; OS
+              </h3>
+              <ul class="tags">
+                <li class="tag tag--green">Kali Linux</li>
+                <li class="tag tag--green">Zsh Shell Environment</li>
+                <li class="tag tag--green">Linux Command-Line Utilities</li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3 class="skill-card__title">
+                <span class="skill-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M8 6l-5 6 5 6M16 6l5 6-5 6M13 4l-2 16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                Development
+              </h3>
+              <ul class="tags">
+                <li class="tag tag--blue">Python</li>
+                <li class="tag tag--blue">HTML</li>
+                <li class="tag tag--blue">CSS</li>
+                <li class="tag tag--blue">JavaScript</li>
+                <li class="tag tag--blue">PHP</li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3 class="skill-card__title">
+                <span class="skill-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <ellipse
+                      cx="12"
+                      cy="6"
+                      rx="8"
+                      ry="3"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                    />
+                    <path
+                      d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                    />
+                  </svg>
+                </span>
+                Databases
+              </h3>
+              <ul class="tags">
+                <li class="tag tag--blue">MySQL Workbench</li>
+                <li class="tag tag--blue">MariaDB</li>
+                <li class="tag tag--blue">Database Normalization</li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3 class="skill-card__title">
+                <span class="skill-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M9 19V6l10-2v13M9 19a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM19 17a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                Tools
+              </h3>
+              <ul class="tags">
+                <li class="tag">Git</li>
+                <li class="tag">GitHub</li>
+                <li class="tag">VS Code</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== PROJECTS ==================== -->
+      <section class="section" id="projects">
+        <div class="container">
+          <header class="section__head reveal">
+            <span class="section__index mono">04</span>
+            <h2 class="section__title">Projects</h2>
+            <span class="section__rule" aria-hidden="true"></span>
+          </header>
+
+          <div class="projects">
+            <article class="project reveal">
+              <span class="project__num mono" aria-hidden="true">01</span>
+              <h3 class="project__title">Enterprise LAN Design</h3>
+              <p class="project__desc">
+                Led a team to design, configure, and troubleshoot a secure local area network
+                topology using Cisco Packet Tracer for CDACC evaluations.
+              </p>
+              <ul class="project__tags" aria-label="Technologies used">
+                <li class="mono">Cisco IOS</li>
+                <li class="mono">VLANs</li>
+                <li class="mono">DHCP</li>
+                <li class="mono">ACLs</li>
+              </ul>
+              <!-- TODO: replace href="#" with your project link (e.g. a write-up or repo) -->
+              <a class="project__link" href="#">
+                View case study
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M7 17L17 7M9 7h8v8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </article>
+
+            <article class="project reveal">
+              <span class="project__num mono" aria-hidden="true">02</span>
+              <h3 class="project__title">Cybersecurity Awareness Platform</h3>
+              <p class="project__desc">
+                Developed conceptual designs and an animated mascot for a cybersecurity educational
+                platform aimed at raising security awareness on social media.
+              </p>
+              <ul class="project__tags" aria-label="Technologies used">
+                <li class="mono">Design</li>
+                <li class="mono">Animation</li>
+                <li class="mono">Social</li>
+              </ul>
+              <!-- TODO: replace href="#" with your project link -->
+              <a class="project__link" href="#">
+                View case study
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M7 17L17 7M9 7h8v8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </article>
+
+            <article class="project reveal">
+              <span class="project__num mono" aria-hidden="true">03</span>
+              <h3 class="project__title">TNNP AI-Starter L1 Sprint</h3>
+              <p class="project__desc">
+                Participated in an intensive AI integration sprint involving peer audits and
+                evaluation of emerging AI workflows.
+              </p>
+              <ul class="project__tags" aria-label="Technologies used">
+                <li class="mono">AI Workflows</li>
+                <li class="mono">Peer Audit</li>
+                <li class="mono">Evaluation</li>
+              </ul>
+              <!-- TODO: replace href="#" with your project link -->
+              <a class="project__link" href="#">
+                View case study
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M7 17L17 7M9 7h8v8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== CONTACT ==================== -->
+      <section class="section section--contact" id="contact">
+        <div class="contact__bg" aria-hidden="true"></div>
+        <div class="container">
+          <header class="section__head reveal">
+            <span class="section__index mono">05</span>
+            <h2 class="section__title">Initiate <em>Handshake</em></h2>
+            <span class="section__rule" aria-hidden="true"></span>
+          </header>
+
+          <div class="contact">
+            <div class="contact__intro reveal">
+              <p>
+                Whether it's a lab build, a security review, or a collaboration on awareness content
+                — the channel is open. Send a message and I'll reply within 48 hours.
+              </p>
+              <ul class="contact__meta">
+                <li><span class="mono">status</span> awaiting handshake</li>
+                <li>
+                  <span class="mono">phone</span>
+                  <a class="contact__link" href="tel:+254706459766">0706459766</a>
+                </li>
+                <li>
+                  <span class="mono">instagram</span>
+                  <a
+                    class="contact__link"
+                    href="https://instagram.com/just.martin__"
+                    rel="me noopener"
+                    target="_blank"
+                    >@just.martin__</a
+                  >
+                </li>
+                <li>
+                  <span class="mono">github</span>
+                  <a
+                    class="contact__link"
+                    href="https://github.com/Marti-ship-it"
+                    rel="me noopener"
+                    target="_blank"
+                    >Marti-ship-it</a
+                  >
+                </li>
+                <li>
+                  <span class="mono">linkedin</span>
+                  <a
+                    class="contact__link"
+                    href="https://www.linkedin.com/in/martin-omondi-2a70a6362"
+                    rel="me noopener"
+                    target="_blank"
+                    >in/martin-omondi</a
+                  >
+                </li>
+                <li><span class="mono">response</span> within 48h</li>
+                <li><span class="mono">encryption</span> TLS 1.3</li>
+              </ul>
+            </div>
+
+            <!-- Submissions POST to the service configured at build time via
+               VITE_CONTACT_ENDPOINT (e.g. https://formspree.io/f/YOUR_ID).
+               See .env.example. The form still validates without it,
+               but delivery only happens once the endpoint is set. -->
+            <form class="form reveal" id="contact-form" novalidate>
+              <div class="form__row">
+                <div class="field">
+                  <label class="field__label mono" for="name">Name</label>
+                  <input
+                    class="field__input"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Jane Doe"
+                    autocomplete="name"
+                    aria-describedby="name-error"
+                    required
+                  />
+                  <p class="field__error" id="name-error" aria-live="polite"></p>
+                </div>
+
+                <div class="field">
+                  <label class="field__label mono" for="email">Email</label>
+                  <input
+                    class="field__input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@domain.com"
+                    autocomplete="email"
+                    aria-describedby="email-error"
+                    required
+                  />
+                  <p class="field__error" id="email-error" aria-live="polite"></p>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="field__label mono" for="message">Message</label>
+                <textarea
+                  class="field__input field__input--area"
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Tell me about the network, the lab, or the problem..."
+                  aria-describedby="message-error"
+                  required
+                ></textarea>
+                <p class="field__error" id="message-error" aria-live="polite"></p>
+              </div>
+
+              <button class="btn btn--primary btn--block" type="submit">
+                Send Message
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="btn__icon">
+                  <path
+                    d="M4 12h15M13 6l6 6-6 6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+
+              <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__copy mono">&copy; <span id="year">2026</span> Martin Omondi</p>
+
+        <div class="footer__social">
+          <a
+            class="icon-link"
+            href="https://github.com/Marti-ship-it"
+            aria-label="GitHub profile, Marti-ship-it"
+            rel="me noopener"
+            target="_blank"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 .5A11.5 11.5 0 00.5 12a11.5 11.5 0 007.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.79 2.73 1.27 3.4.97.1-.76.4-1.28.74-1.57-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12 11.5 11.5 0 0012 .5z"
+              />
+            </svg>
+          </a>
+
+          <a
+            class="icon-link"
+            href="https://www.linkedin.com/in/martin-omondi-2a70a6362"
+            aria-label="LinkedIn profile, Martin Omondi"
+            rel="me noopener"
+            target="_blank"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C21.4 8.75 22 11.2 22 14.5V21h-4v-5.8c0-1.38-.03-3.16-1.94-3.16-1.94 0-2.24 1.5-2.24 3.06V21h-4z"
+              />
+            </svg>
+          </a>
+
+          <a
+            class="icon-link"
+            href="https://instagram.com/just.martin__"
+            aria-label="Instagram profile, @just.martin__"
+            rel="me noopener"
+            target="_blank"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.71-2.13 1.38C1.34 2.68.93 3.35.63 4.14c-.3.76-.5 1.64-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.71 1.46 1.38 2.13.67.67 1.34 1.08 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.71 2.13-1.38.67-.67 1.08-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.71-1.46-1.38-2.13C21.32 1.34 20.65.93 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"
+              />
+              <path
+                fill="currentColor"
+                d="M12 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zM12 16a4 4 0 110-8 4 4 0 010 8z"
+              />
+              <circle cx="18.41" cy="5.59" r="1.44" fill="currentColor" />
+            </svg>
+          </a>
+        </div>
+
+        <button class="footer__top mono" type="button" id="back-to-top">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 19V5M5 12l7-7 7 7"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          top
+        </button>
+      </div>
+    </footer>
+
+    <!-- Compiled and bundled by Vite → dist/assets. The `js` class gates the
+       entrance reveals: without JS every reveal ships visible. -->
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
