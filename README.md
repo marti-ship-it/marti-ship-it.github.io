@@ -71,20 +71,31 @@ EmailJS, Basin, Getform, your own API, etc. No markup changes needed.
 - Output: `dist`
 - Set `VITE_CONTACT_ENDPOINT` and `VITE_SITE_URL` as environment variables.
 
-### GitHub Pages (project site)
+### GitHub Pages (recommended — one-click deploy)
 
-Set the base path at build time so asset URLs are correct:
+There's a ready-made pipeline at `.github/workflows/deploy.yml` that runs
+`npm run lint` + `npm run build` and publishes `dist/` to GitHub Pages on every
+push to `main`. It sets `BASE_PATH` automatically, so it handles both a
+**user site** (`marti-ship-it.github.io`) and a **project site**
+(`marti-ship-it.github.io/<repo>/`).
 
-```powershell
-$env:BASE_PATH="/your-repo-name/"
-npm run build
-```
+Getting it live:
 
-Then push the contents of `dist/`. For the PWA service worker to work under a
-sub-path, keep the same `BASE_PATH` across builds.
+1. Create a repository on GitHub. For the portfolio at the domain root, name
+   it exactly `marti-ship-it.github.io`; otherwise pick any name for a project
+   site.
+2. Push this project (`git remote add origin <repo-url>` then `git push -u
+origin main`).
+3. In the repo: **Settings → Pages → Build and deployment → Source: GitHub
+   Actions** (the workflow handles the rest).
+4. Add the contact form secret so delivery works in production:
+   **Settings → Secrets and variables → Actions → New repository secret** →
+   name `VITE_CONTACT_ENDPOINT`, value your Formspree URL.
+5. The first run may take ~1–2 minutes; your site is then live and kept in
+   sync on every push.
 
-Before going live, update `public/sitemap.xml` and `public/robots.txt` with the
-real domain.
+Before going live, update `public/sitemap.xml` and `public/robots.txt` with
+the real URLs.
 
 ## Project layout
 

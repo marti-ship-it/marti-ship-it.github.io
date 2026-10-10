@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 
-# Point engines at the sitemap once deployed (domain in sitemap.xml)
-Sitemap: https://your-domain.com/sitemap.xml
+# GitHub Pages user-site URL. If you deploy to a project site instead,
+# prefix the paths with /<repo-name>/ here and in sitemap.xml.
+Sitemap: https://marti-ship-it.github.io/sitemap.xml
